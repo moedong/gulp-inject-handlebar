@@ -1,0 +1,17 @@
+<!--Handlebars.js模版-->
+<!--Handlebars.js模版放在script标签中，保留了html原有层次结构,模版中要写一些操作语句-->
+<!--id可以用来唯一确定一个模版,type是模版固定的写法-->
+<script id="table-template" type="text/x-handlebars-template">
+  {{#each student}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{sex}}</td>
+      <td>{{age}}</td>
+      {{#compare age 20}}
+        <td>{{homePage}}</td>
+      {{else}}
+        <td>{{{homePage}}}</td>
+      {{/compare}}
+    </tr> 
+  {{/each}}
+</script>
